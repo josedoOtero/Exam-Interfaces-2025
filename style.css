@@ -1,0 +1,142 @@
+/* Datos */
+:root {
+    --main-green: #136f63; 
+    --dark-green: #0b3d33;
+    --background-pale: #e4f9f5;
+    --highlight-orange: #ffa726; 
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/Montserrat-VariableFont_wght.ttf');
+}
+
+/* Cambios generales sobre la página */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: var(--background-pale);
+}
+
+a {
+    text-decoration: none;
+    color: var(--highlight-orange);
+}
+
+a:hover {
+    color: var(--background-pale);
+}
+
+input {
+    border: solid 1px var(--dark-green);
+    cursor: pointer;
+    border-radius: 4px;
+    height: 20px;
+    padding: 3px 1px;
+}
+
+input:hover {
+    transition: 0.2s;
+    scale: 1.05;
+    border-color: var(--highlight-orange);
+}
+
+button {
+    border: solid 1px var(--dark-green);
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 3px;
+    padding-inline: 3px;
+}
+
+button:hover{
+    border-color: var(--highlight-orange);
+}
+
+.texto_tam_1 {
+    font-size: 18px;
+}
+
+.texto_tam_2 {
+    font-size: 16px;
+}
+
+.texto_tam_3 {
+    font-size: 14px;
+}
+
+/* Cambios de elementos específicos (orden de arriba a abajo) */
+header {
+    display: flex;
+    background: linear-gradient(to right, var(--highlight-orange), var(--main-green));
+}
+
+header .logo {
+    width: 50px;
+    margin: 15px;
+    margin-right: auto;
+}
+
+header .logo:hover {
+    transition: 0.3s;
+    transform: rotate(360deg);
+}
+
+header a, header p {
+    text-align: end;
+    margin: auto;
+    margin-inline: 15px;
+    cursor: pointer;
+}
+
+header p{
+    font-size: 25px;
+    visibility: hidden;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    text-shadow: 6px 3px 4px var(--highlight-orange);
+}
+
+.barra_busqueda {
+    margin-top: 10px;
+}
+
+.barra_busqueda button:hover{
+    transition: 0.2s;
+    transform: scale(1.15);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to left, var(--highlight-orange), var(--main-green), var(--highlight-orange));
+    position: absolute;
+    top: 100%;
+    transform: translate(0, -100%);
+    padding: 10px;
+}
+
+footer a {
+    margin-inline: 10px;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    header a, header p {
+        visibility: hidden;
+    }
+    
+    header p{
+        font-size: 25px;
+        visibility: visible;
+    }
+}
